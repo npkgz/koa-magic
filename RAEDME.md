@@ -1,11 +1,14 @@
 http-magic
 =========================================
-Summary
+Supercharged, Ready-to-go, Web-Application Toolkit
 
 ![Screenshot](assets/screenshot.png)
 
 ## Features ##
 
+## Docs ##
+
+* [Cluster/Hot-Reload](docs/cluster.md)
 
 ## Install ##
 
