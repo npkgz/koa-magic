@@ -1,0 +1,25 @@
+{
+    "name": "http-magic",
+    "description": "async web-application server based on koa",
+    "version": "0.0.1",
+    "author": "Andi Dittrich",
+    "main": "./http-magic.js",
+    "bin": {},
+    "engines": {
+        "node": ">=8"
+    },
+    "scripts": {
+        "test": "eslint lib/**.js; mocha"
+    },
+    "dependencies": {
+        "koa": "^2.4.1",
+        "koa-compress": "^2.0.0",
+        "koa-session": "^5.8.1",
+        "logging-facility": "^1.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.15.0",
+        "eslint-config-aenondynamics": "^0.2.0",
+        "mocha": "^5.0.0"
+    }
+}
