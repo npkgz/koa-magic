@@ -70,12 +70,12 @@ const myrouter = new Router();
 myrouter.get('/world.html', ctx => {
     ctx.body = "ook";
 });
-myrouter.post('/world.html', ctx => {
-    ctx.body = "ook";
+myrouter.post('/:action/:view?', ctx => {
+    ctx.body = "action:" + ctx.params.action + ' - ' + ctx.params.view;
 });
 
-// attach to root path
-koa.get('/helloworld.html' ctx => {
+// attach handler to root path
+koa.get('/helloworld.html', ctx => {
     ctx.body = 'Helloworld';
 });
 
