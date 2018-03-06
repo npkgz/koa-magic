@@ -1,7 +1,7 @@
 {
     "name": "koa-magic",
-    "description": "async web-application server based on koa",
-    "version": "0.1.0",
+    "description": "koa supercharged. middleware library. ready-to-go web-application-server",
+    "version": "0.2.0",
     "author": "Andi Dittrich",
     "main": "./koa-magic.js",
     "bin": {},

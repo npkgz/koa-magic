@@ -1,6 +1,6 @@
 koa-magic
 =========================================
-Supercharged, Ready-to-go, Web-Application Server
+koa supercharged. middleware library. ready-to-go web-application-server based on [koajs v2](https://github.com/koajs/koa)
 
 ## Features ##
 
@@ -25,14 +25,44 @@ koa-magic provides the following modules
 * [Koa](docs/koa.md) - Extended Koa class including routing methods `require('koa-magic').Koa`
 * [Router](docs/router.md) - Stackable - express like - routing middleware `require('koa-magic').Router`
 * [ApplicationServer](docs/application-server.md) - Ready-to-use Koa webserver including basic middleware (compress, sessions) `require('koa-magic').ApplicationServer`
+* [ErrorLogger](docs/error-logger.md) - error-logging middleware - exceptions are logged by [logging-facility](https://www.npmjs.com/package/logging-facility) `require('koa-magic').ErrorLogger`
 
 ## Docs ##
 
 TBD
 
+## Koa Extend ##
+
+Basic [Koa Class](https://github.com/koajs/koa/blob/master/lib/application.js) extended by routing methods.
+
+### Examples ###
+
+**Example 1 - path routing**
+```js
+const Router = require('koa-magic').Router;
+const Koa = require('koa-magic').Koa;
+
+// initialize koa + router
+const webapp = new Koa();
+const myrouter = new Router();
+
+// attach handler to root path
+koa.get('/helloworld.html', ctx => {
+    ctx.body = 'Helloworld';
+});
+
+// attach router middleware - use attach() of extended Koa!
+koa.attach('/hello', myrouter);
+
+// start server
+koa.listen(...);
+```
+
 ## Router ##
 
-The path is parsed by [path-to-regexp](https://github.com/pillarjs/path-to-regexp) to enable parametric paths. The parameters are exposed by the `ctx.params` object.
+The mount-path is processed by [path-to-regexp](https://github.com/pillarjs/path-to-regexp) to enable parametric path expressions. The parameters are exposed by the `ctx.params` object.
+
+**Note:** use `.attach()` instead of `.use()` to add middleware to the stack. It handles flat middleware functions like `(ctx, next) => {}` as well as instances of `Router`!
 
 ### Methods ##
 
@@ -86,7 +116,31 @@ koa.attach('/hello', myrouter);
 koa.listen(...);
 ```
 
-**Example 2 - vhost routing**
+**Example 2 - path routing with request forwarding**
+```js
+const Router = require('koa-magic').Router;
+const Koa = require('koa-magic').Koa;
+
+// initialize koa + router
+const webapp = new Koa();
+const myrouter = new Router();
+
+myrouter.get('(.*)', (ctx, next) => {
+    dosomething();
+    return next();
+});
+myrouter.post('/:action/:view?', ctx => {
+    ctx.body = "action:" + ctx.params.action + ' - ' + ctx.params.view;
+});
+
+// attach router middleware - use attach() of extended Koa!
+koa.attach('/mymodule', myrouter);
+
+// start server
+koa.listen(...);
+```
+
+**Example 3 - vhost routing**
 ```js
 const Router = require('koa-magic').Router;
 const Koa = require('koa-magic').Koa;
