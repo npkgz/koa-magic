@@ -1,7 +1,7 @@
 {
     "name": "koa-magic",
     "description": "koa supercharged. middleware library. ready-to-go web-application-server",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": "Andi Dittrich",
     "main": "./koa-magic.js",
     "bin": {},
@@ -15,6 +15,19 @@
     "scripts": {
         "test": "eslint lib/**.js; mocha"
     },
+    "keywords": [
+        "koa",
+        "http",
+        "https",        
+        "router",
+        "middleware",
+        "application",
+        "async",
+        "es2017"
+    ],
+    "homepage": "https://github.com/AndiDittrich/Node.koa-magic",
+    "bugs": "https://github.com/AndiDittrich/Node.koa-magic/issues",
+    "repository": "AndiDittrich/Node.koa-magic",
     "dependencies": {
         "colors": "^1.1.2",
         "http-error-pages": "^2.0.0",
