@@ -2,6 +2,8 @@ koa-magic
 =========================================
 koa supercharged. middleware library. ready-to-go web-application-server based on [koajs v2](https://github.com/koajs/koa)
 
+**PRELIMINARY RELEASE - API SUBJECTED TO CHANGE**
+
 ## Features ##
 
 * Stackable routing middleware 
