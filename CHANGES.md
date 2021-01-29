@@ -4,7 +4,7 @@ Changelog
 
 ## Branch v1.x.x ##
 
-### 1.0.0 ###
+### 1.0.2 ###
 
 * Refactored codebase
 * Added: `sendfile` implementation to serve single files (available within koa context)
