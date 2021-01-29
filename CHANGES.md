@@ -1,3 +1,15 @@
+Changelog 
+========================
+
+
+## Branch v1.x.x ##
+
+### 1.0.0 ###
+
+* Refactored codebase
+* Added: `sendfile` implementation to serve single files (available within koa context)
+* Added: staticfile implementation to serve static files within given root path (replaces koa-static)
+
 ## Preliminary Release ##
 
 ### 0.4.0 ###

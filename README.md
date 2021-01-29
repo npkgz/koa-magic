@@ -1,8 +1,7 @@
 koa-magic
 =========================================
-koa supercharged. middleware library. ready-to-go web-application-server based on [koajs v2](https://github.com/koajs/koa)
 
-**PRELIMINARY RELEASE - API SUBJECTED TO CHANGE**
+koa supercharged. middleware library. ready-to-go web-application-server based on [koajs v2](https://github.com/koajs/koa)
 
 ## Features ##
 
@@ -12,6 +11,8 @@ koa supercharged. middleware library. ready-to-go web-application-server based o
 * Easy to use application server including basic koa modules
 * Components can be used standalone
 * Cluster support/Hot-Reload via [cluster-magic](https://github.com/AndiDittrich/Node.cluster-magic)
+* Sendfile implementation
+* Static fileserver implementation
 
 ## Install ##
 
@@ -24,14 +25,15 @@ $ yarn add koa-magic
 
 koa-magic provides the following modules
 
-* [Koa](docs/koa.md) - Extended Koa class including routing methods `require('koa-magic').Koa`
-* [Router](docs/router.md) - Stackable - express like - routing middleware `require('koa-magic').Router`
-* [ApplicationServer](docs/application-server.md) - Ready-to-use Koa webserver including basic middleware (compress, sessions) `require('koa-magic').ApplicationServer`
-* [ErrorLogger](docs/error-logger.md) - error-logging middleware - exceptions are logged by [logging-facility](https://www.npmjs.com/package/logging-facility) `require('koa-magic').ErrorLogger`
+```js
+const {Koa, Router, ApplicationServer, ErrorLogger, Dispatcher} = require('koa-magic');
+```
 
-## Docs ##
-
-TBD
+* [Koa](docs/koa.md) - Extended Koa class including routing methods
+* [Router](docs/router.md) - Stackable - express like - routing middleware
+* [ApplicationServer](docs/application-server.md) - Ready-to-use Koa webserver including basic middleware (compress, sessions) 
+* [ErrorLogger](docs/error-logger.md) - error-logging middleware - exceptions are logged by [logging-facility](https://www.npmjs.com/package/logging-facility)
+* [Dispatcher](docs/dispatcher.md) - routing middleware dispatcher (used by Router)
 
 ## Koa Extend ##
 
