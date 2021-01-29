@@ -6,7 +6,7 @@
     "main": "./koa-magic.js",
     "bin": {},
     "engines": {
-        "node": ">=8"
+        "node": ">=10"
     },
     "files": [
         "koa-magic.js",
