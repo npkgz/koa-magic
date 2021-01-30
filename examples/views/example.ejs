@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%= vars.title %></title>
+</head>
+<body>
+
+<header>
+    <title></title>
+</header>
+
+<main>
+
+    <h3>CSRF State</h3>
+    <%= (vars.ctx.request.csrfValid ? 'ok' : 'validation failed') %>
+
+    <h3>Form with CSRF token</h3>
+    <form action="/data" method="POST">
+        <input type="hidden" name="_csrfToken" value="<%= vars.ctx.response._csrfToken %>" />
+        
+        <textarea name="text"></textarea>
+
+        <button type="submit">Submit Data</button>
+    
+    </form>
+
+    <pre>
+        <%= vars.text %>
+    </pre>
+
+    <h3>Form without CSRF token</h3>
+    <form action="/data" method="POST">
+        <textarea name="text"></textarea>
+
+        <button type="submit">Submit Data</button>
+    
+    </form>
+
+    <pre>
+        <%= vars.text %>
+    </pre>
+
+</main>
+
+<footer>
+    <hr />
+</footer>
+
+</body>
+</html>
