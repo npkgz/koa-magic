@@ -1,8 +1,13 @@
 Changelog 
 ========================
 
+## Branch 1.x ##
 
-## Branch v1.x.x ##
+### 1.1.0 ###
+
+* Added: csrf token generation+validation to be used with keygrip/cookie storage
+* Added: async [ejs](https://github.com/mde/ejs) renderer
+* Added: enhanced usage example
 
 ### 1.0.2 ###
 
