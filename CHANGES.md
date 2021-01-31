@@ -3,6 +3,11 @@ Changelog
 
 ## Branch 1.x ##
 
+### 1.1.1 ###
+
+* Bugfix: `_csrfToken` was exposed in `ctx.response` instead of `ctx.state`
+* Bugfix: csrf middleware failed to forward request on succeess (typo)
+
 ### 1.1.0 ###
 
 * Added: csrf token generation+validation to be used with keygrip/cookie storage

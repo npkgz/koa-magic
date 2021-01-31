@@ -20,7 +20,7 @@
 
     <h3>Form with CSRF token</h3>
     <form action="/data" method="POST">
-        <input type="hidden" name="_csrfToken" value="<%= vars.ctx.response._csrfToken %>" />
+        <input type="hidden" name="_csrfToken" value="<%= vars.ctx.state._csrfToken %>" />
         
         <textarea name="text"></textarea>
 

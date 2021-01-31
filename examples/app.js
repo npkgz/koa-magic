@@ -11,7 +11,7 @@ function applicationHandler(koa){
     koa.proxy = true;
 
     // enable ejs support
-    koa.extend(_koaMagic.EJS, {
+    await koa.extend(_koaMagic.EJS, {
         root: _path.join(__dirname, 'views')
     });
 
