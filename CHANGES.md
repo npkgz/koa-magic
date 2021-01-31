@@ -3,6 +3,12 @@ Changelog
 
 ## Branch 1.x ##
 
+### 1.2.0 ###
+
+* Added: http 304 not-modified support to `sendfile` (ctx.fresh check)
+* Changed: set sendfile default `maxage=86400`
+* Bugfix: `maxage` was not evaluated due to case typo (maxAge)
+
 ### 1.1.1 ###
 
 * Bugfix: `_csrfToken` was exposed in `ctx.response` instead of `ctx.state`
