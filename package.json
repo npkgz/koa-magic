@@ -1,7 +1,7 @@
 {
     "name": "koa-magic",
     "description": "koa supercharged. routing. middleware library. ready-to-go web-application-server",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "author": "Andi Dittrich",
     "main": "./koa-magic.js",
     "bin": {},
@@ -29,9 +29,9 @@
         "async",
         "es2017"
     ],
-    "homepage": "https://github.com/AndiDittrich/Node.koa-magic",
-    "bugs": "https://github.com/AndiDittrich/Node.koa-magic/issues",
-    "repository": "AndiDittrich/Node.koa-magic",
+    "homepage": "https://github.com/npkgz/koa-magic",
+    "bugs": "https://github.com/npkgz/koa-magic/issues",
+    "repository": "npkgz/koa-magic",
     "dependencies": {
         "colors": "^1.4.0",
         "ejs": "^3.1.5",

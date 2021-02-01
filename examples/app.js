@@ -6,7 +6,7 @@ const _koaMagic = require('../koa-magic');
 _loggingFacility.setBackend('fancy-cli');
 
 // initialize middleware
-function applicationHandler(koa){
+async function applicationHandler(koa){
     // trust proxy field
     koa.proxy = true;
 
